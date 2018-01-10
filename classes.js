@@ -100,7 +100,47 @@ return this.reports}
   Call your new class ProgressiveManager
 */
 
-//Code Here
+class Progressivemanager
+{
+  constructor(first_name,last_name,email,age){
+      this.first_name = first_name;
+      this.last_name = last_name;
+      this.email = email;
+      this.age = age;
+      this.reports = [];
+      this.title = "Not a manager";
+      this.bonus = 0;
+  }
+  hire(Employee){
+    return this.reports.push(Employee);
+  }
+  fire(index){
+    this.reports.splice(1,1);
+  return this.reports
+  }
+  ifs()
+  {
+    if(this.reports.length<1)
+    {
+      return "Not a manager";
+    }
+    else if(this.reports.length<4){
+      return "Barely a manager";
+    }
+    else if(this.reports.length<11){
+      return "Mostly a manager";
+    }
+    else if(this.reports.length<51){
+      return "Manager";
+    }
+    else if(this.reports.length<101){
+      return "Manager Plus";
+    }
+    else{
+      return "Bestest Manager";
+    }
+  }
+  }
 
 
 
@@ -127,6 +167,5 @@ return this.reports}
         - It should set decrease wear_and_tear_count by 10, and set needs_reboot to false
 */
 
-//Code Here
-
+//class Machine
 
