@@ -61,9 +61,22 @@ var stan = new Employee("stan","smith","email",10);
   Call your new class Manager
 */
 
-//Code Here
-
-
+class Manager
+{
+  constructor(first_name,last_name,email,age){
+      this.first_name = first_name;
+      this.last_name = last_name;
+      this.email = email;
+      this.age = age;
+      this.reports = [];
+}
+hire(Employee){
+  return this.reports.push(Employee);
+}
+fire(index){
+  this.reports.splice(1,1);
+return this.reports}
+};
 
 ////////// PROBLEM 3 //////////
 
