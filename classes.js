@@ -100,7 +100,7 @@ return this.reports}
   Call your new class ProgressiveManager
 */
 
-class Progressivemanager
+class ProgressiveManager
 {
   constructor(first_name,last_name,email,age){
       this.first_name = first_name;
@@ -112,32 +112,34 @@ class Progressivemanager
       this.bonus = 0;
   }
   hire(Employee){
-    return this.reports.push(Employee);
+
+    this.reports.push(Employee);
+    this.ifs()
   }
   fire(index){
-    this.reports.splice(1,1);
-  return this.reports
+    this.reports.splice(index,1);
+  this.bonus+=100;
   }
   ifs()
   {
     if(this.reports.length<1)
     {
-      return "Not a manager";
+      return this.title = "Not a manager";
     }
     else if(this.reports.length<4){
-      return "Barely a manager";
+      return this.title = "Barely Manager";
     }
     else if(this.reports.length<11){
-      return "Mostly a manager";
+      return this.title = "Mostly Manager";
     }
     else if(this.reports.length<51){
-      return "Manager";
+      return this.title = "Manager";
     }
     else if(this.reports.length<101){
-      return "Manager Plus";
+      return this.title = "Manager Plus";
     }
     else{
-      return "Bestest Manager";
+      return this.title = "Bestest Manager";
     }
   }
   }
