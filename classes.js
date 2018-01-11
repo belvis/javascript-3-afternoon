@@ -169,5 +169,28 @@ class ProgressiveManager
         - It should set decrease wear_and_tear_count by 10, and set needs_reboot to false
 */
 
-//class Machine
+class Machine{
+  constructor()
+  {
+    this.widgets_made_count = 0;
+    this.wear_and_tear_count = 0;
+    this.needs_reboot = false;
+    this.record =0;
+  }
+  makeWidgets(num){
+this.widgets_made_count+=num;
+  this.wear_and_tear_count = Math.floor(this.widgets_made_count/50) - this.record;
+  }
+fixMachine(){
+  this.needs_reboot = true;
+}
+reboot(){
+ this.record+=10;
+ this.wear_and_tear_count = Math.floor(this.widgets_made_count/50) - this.record;
+ this.needs_reboot = false;
+ return function(){
+   
+ }
+}
+}
 
