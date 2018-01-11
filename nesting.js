@@ -50,13 +50,14 @@ var employees = [
     3. Return the updated employee array.
 */
 
-var employeeUpdater =()=> {
-  employees= employees.filter(x => x.firstName !== "Theo");
-  for(let i=0;i<employees.length;i++){
-    if(employees[i].firstName =="Lorie"){
-      employees[i].department = "HR";   
-  }}
-return employees;
+var employeeUpdater = () => {
+  employees = employees.filter(x => x.firstName !== "Theo");
+  for (let i = 0; i < employees.length; i++) {
+    if (employees[i].firstName == "Lorie") {
+      employees[i].department = "HR";
+    }
+  }
+  return employees;
 }
 //employees= employees.map(x =>{
 //  if(x.firstName =="Lorie"){
@@ -90,7 +91,7 @@ var cat = {
     {
       name: 'Grumpy',
       activities: ['be grumpy', 'eat food']
-    }, 
+    },
     {
       name: 'Lazy Bones',
       activities: ['sleep', 'pre-sleep naps']
@@ -155,7 +156,7 @@ var myCar = {
 ////////// PROBLEM 5 //////////
 
 // Do not edit the code below.
-var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
+var numsArr = [[1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 // Do not edit the code above.
 
 /*
@@ -167,6 +168,14 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-//Code Here
-
-
+var looper = () => {
+  for (let i = 0; i < numsArr.length; i++) {
+    for (let j = 0; j < numsArr[i].length;j++){
+      if(numsArr[i][j]%2===0){
+        numsArr[i][j]= "even";
+      }
+      else{numsArr[i][j]= "odd";}
+    }
+  }
+  return numsArr;
+}
